@@ -1,0 +1,172 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-u4luzZKzEEk",
+        "outputId": "c1290931-5ae8-4328-9dc9-52a2427f4bfc"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter student name: Aditi Ray \n",
+            "Enter mathematics marks: 98\n",
+            "Enter physics marks: 83\n",
+            " Enter chemistry marks:  85\n",
+            "Enter Hindi marks:  91\n",
+            "Enter English marks: 82\n",
+            "/n_ _ _ _ _ STUDENT RESULT_ _ _ _ _\n",
+            " Name: Aditi Ray \n",
+            " total marks: 439.0 /500\n",
+            "percentage: 87.8 %\n",
+            "Grade: A\n"
+          ]
+        }
+      ],
+      "source": [
+        "# Student Grade Analyzer\n",
+        "name = input (\"Enter student name: \")\n",
+        "\n",
+        "maths = float(input (\"Enter mathematics marks: \"))\n",
+        "physics = float (input (\"Enter physics marks: \"))\n",
+        "chemistry = float ( input (\" Enter chemistry marks:  \"))\n",
+        "Hindi = float ( input (\"Enter Hindi marks:  \"))\n",
+        "English = float (input (\"Enter English marks: \"))\n",
+        "\n",
+        "total = maths + physics + chemistry + Hindi + English\n",
+        "percentage = total /5\n",
+        "\n",
+        "if percentage >= 90:\n",
+        "     Grade = \"A+\"\n",
+        "elif percentage >= 80:\n",
+        "    Grade = \"A\"\n",
+        "elif percentage >= 70:\n",
+        "      Grade = \"B\"\n",
+        "elif percentage >= 60:\n",
+        "      Grade =\"C\"\n",
+        "else:\n",
+        "       Grade = \"D\"\n",
+        "print(\"/n_ _ _ _ _ STUDENT RESULT_ _ _ _ _\")\n",
+        "print(\" Name:\", name)\n",
+        "print(\" total marks:\", total, \"/500\")\n",
+        "print (\"percentage:\" , round(percentage, 2), \"%\")\n",
+        "print(\"Grade:\", Grade)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Improved student grade analyzer\n",
+        "name = input(\" Enter student name:\")\n",
+        "\n",
+        "subjects ={\n",
+        "    \"mathematics\" : float(input (\"Enter mathematics marks: \")),\n",
+        "    \"physics\" : float (input (\"Enter physics marks: \")),\n",
+        "    \"chemistry\" : float (input(\"Enter chemistry marks: \")),\n",
+        "    \"Hindi\": float(input (\" Enter Hindi marks: \")),\n",
+        "    \"English\" : float (input (\"Enter English marks: \")),\n",
+        "}\n",
+        "\n",
+        "total = sum(subjects.values())\n",
+        "percentage = total / len(subjects)\n",
+        "\n",
+        "highest_subject = max(subjects, key=subjects.get )\n",
+        "lowest_subject = min(subjects, key=subjects.get)\n",
+        "\n",
+        "if percentage >=90:\n",
+        "    Grade = \"A+\"\n",
+        "elif percentage >= 80:\n",
+        "    Grade = \"A\"\n",
+        "elif percentage >= 70:\n",
+        "    Grade = \"B\"\n",
+        "elif percentage >= 60:\n",
+        "    Grade = \"C\"\n",
+        "else:\n",
+        "    Grade = \"D\"\n",
+        "\n",
+        "print(\"/n = = = = = STUDENT RESULT  = = = = =\")\n",
+        "print(\"Name:\", name)\n",
+        "print(\"total marks:\", total, \"/500\")\n",
+        "print(\"percentage: \", round(percentage ,2), \"%\" )\n",
+        "print(\"Grade:\", Grade)\n",
+        "print(\"highest scoring subject:\", highest_subject)\n",
+        "print(\"lowest scoring subject: \", lowest_subject)\n",
+        "print(\"=================================\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dAfP7CW-5g2q",
+        "outputId": "ed423f5b-04ed-443c-8b68-02e8d67ef694"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            " Enter student name:Aditi Ray \n",
+            "Enter mathematics marks: 98\n",
+            "Enter physics marks: 83\n",
+            "Enter chemistry marks: 85\n",
+            " Enter Hindi marks: 91\n",
+            "Enter English marks: 82\n",
+            "/n = = = = = STUDENT RESULT  = = = = =\n",
+            "Name: Aditi Ray \n",
+            "total marks: 439.0 /500\n",
+            "percentage:  87.8 %\n",
+            "Grade: A\n",
+            "highest scoring subject: mathematics\n",
+            "lowest scoring subject:  English\n",
+            "=================================\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "z4l0mN0QBeLF"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "HrfNftYcNUx3"
+      }
+    }
+  ]
+}
